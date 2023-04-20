@@ -13,3 +13,10 @@ class Recipe_model(models.Model):
 
     def __str__(self):
         return self.title
+
+class Measure_model(models.Model):
+    name = models.CharField(max_length=30, unique=True)
+    abbreviation = models.CharField(max_length=10, unique=True)
+
+    def __str__(self):
+        return self.name
