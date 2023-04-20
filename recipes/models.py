@@ -3,14 +3,15 @@ from django.db import models
 
 # Create your models here.
 class Recipe(models.Model):
-    title = models.CharField(max_length=125)
-    notes = models.TextField()
+    name = models.CharField(max_length=125)
+    author = models.CharField(max_length=100)
+    description = models.TextField()
     image = models.URLField(null=True, blank=True, max_length=200)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.title
+        return self.name
 
 
 class Measure(models.Model):
@@ -22,7 +23,8 @@ class Measure(models.Model):
 
 
 class FoodItem(models.Model):
-    name = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100, unique=False)
+    note = models.CharField(max_length=100, blank=True)
 
     def __str__(self):
         return self.name
@@ -36,7 +38,7 @@ class Ingredient(models.Model):
     food = models.ForeignKey(FoodItem, on_delete=models.PROTECT)
 
     def __str__(self):
-        return self.food
+        return self.food.name
 
 
 class Step(models.Model):
@@ -45,4 +47,4 @@ class Step(models.Model):
     directions = models.TextField()
 
     def __str__(self):
-        return self.recipe
+        return self.recipe.name + " step " + str(self.order)
