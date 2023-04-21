@@ -55,3 +55,18 @@ class Step(models.Model):
 
     def __str__(self):
         return self.recipe.name + " step " + str(self.order)
+
+
+class Rating(models.Model):
+    value = models.IntegerField(
+        default=0,
+        validators=[
+            MaxValueValidator(5),
+            MinValueValidator(0)
+        ]
+     )
+    recipe = models.ForeignKey(
+        Recipe,
+        related_name="ratings",
+        on_delete=models.CASCADE
+        )
