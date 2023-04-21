@@ -61,9 +61,15 @@
           </ul>
         </div>
       </nav>
-      <h1 class="text-center text-warning">
-        <b>Farm Fresh Recipes</b>
-      </h1>
+      <div class="position-relative">
+        <img class="position-absolute top-0 start-50 translate-middle"
+             src="{% static "recipes/images/farm-house-logo.png" %}"
+             height="50px"
+             width="auto"/>
+        <h1 class="text-center text-warning lh-lg">
+          <b>Farm Fresh Recipes</b>
+        </h1>
+      </div>
     </header>
     <main>
       {% for recipe in recipes %}
