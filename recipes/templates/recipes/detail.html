@@ -1,4 +1,5 @@
 {% load static %}
+{% load markdownify %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -88,7 +89,8 @@
         Tags:
         {% for tag in recipe.tags.all %}{{ tag.word }}{% endfor %}
       </p>
-      <p>{{ recipe.description }}</p>
+      {{ recipe.description | markdownify }}
+      {% comment %} <p>{{ recipe.description }}</p> {% endcomment %}
       <h2>Ingredients</h2>
       <table>
         <thead>
