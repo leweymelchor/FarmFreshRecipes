@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render
+from recipes.forms import RatingForm
 
 try:
     from recipes.forms import RecipeForm
@@ -52,5 +53,20 @@ def show_recipes(request):
 def show_recipe(request, pk):
     context = {
         "recipe": Recipe.objects.get(pk=pk) if Recipe else None,
+        "rating_form": RatingForm(),
     }
     return render(request, "recipes/detail.html", context)
+
+
+def log_rating(request, recipe_id):
+    if request.method == "POST":
+        form = RatingForm(request.POST)
+        if form.is_valid():
+            rating = form.save(commit=False)
+            try:
+                rating.recipe = Recipe.objects.get(pk=recipe_id)
+                rating.save()
+            except Recipe.DoesNotExist:
+                return redirect("recipes_list")
+
+    return redirect("recipe_detail", pk=recipe_id)

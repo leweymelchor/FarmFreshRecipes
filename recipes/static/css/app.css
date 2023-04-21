@@ -72,6 +72,11 @@ url {
   color:rgb(255, 232, 80)
 }
 
+#rating {
+  display: flex;
+}
+
+
 .recipe-grid {
   display: inline-block;
   grid-template-columns: repeat(4, 1fr);

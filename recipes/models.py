@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 
+
 # Create your models here.
 class Recipe(models.Model):
     name = models.CharField(max_length=125)
@@ -58,15 +59,17 @@ class Step(models.Model):
 
 
 class Rating(models.Model):
-    value = models.IntegerField(
-        default=0,
+    value = models.PositiveSmallIntegerField(
         validators=[
             MaxValueValidator(5),
-            MinValueValidator(0)
+            MinValueValidator(1)
         ]
      )
     recipe = models.ForeignKey(
-        Recipe,
+        "Recipe",
         related_name="ratings",
         on_delete=models.CASCADE
         )
+
+    def __str__(self):
+        return f"{self.recipe} is {self.value}  Out of 5"
