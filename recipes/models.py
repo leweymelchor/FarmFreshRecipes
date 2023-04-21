@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 # Create your models here.
 class Recipe(models.Model):
@@ -31,7 +31,13 @@ class FoodItem(models.Model):
 
 
 class Ingredient(models.Model):
-    amount = models.FloatField()
+    amount = models.IntegerField(
+        default=1,
+        validators=[
+            MaxValueValidator(20),
+            MinValueValidator(1)
+        ]
+     )
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE,
                                related_name="ingredients")
     measure = models.ForeignKey(Measure, on_delete=models.PROTECT)
