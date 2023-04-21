@@ -7,8 +7,8 @@ class Recipe(models.Model):
     author = models.CharField(max_length=100)
     description = models.TextField()
     image = models.URLField(null=True, blank=True, max_length=200)
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
+    created = models.DateField(auto_now_add=True, blank=True, null=True)
+    updated = models.DateField(auto_now=True, blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -45,6 +45,7 @@ class Step(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="steps")
     order = models.PositiveSmallIntegerField()
     directions = models.TextField()
+    food_items = models.ManyToManyField("FoodItem", null=True, blank=True)
 
     def __str__(self):
         return self.recipe.name + " step " + str(self.order)
