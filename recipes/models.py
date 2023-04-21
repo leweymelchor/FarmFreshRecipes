@@ -45,7 +45,7 @@ class Step(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="steps")
     order = models.PositiveSmallIntegerField()
     directions = models.TextField()
-    food_items = models.ManyToManyField("FoodItem", null=True, blank=True)
+    food_items = models.ManyToManyField("FoodItem", blank=True)
 
     def __str__(self):
         return self.recipe.name + " step " + str(self.order)
