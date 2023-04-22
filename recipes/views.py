@@ -1,6 +1,9 @@
 from django.shortcuts import redirect, render
+from django.urls import reverse_lazy
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView
+
 
 from recipes.forms import RatingForm
 
@@ -14,20 +17,27 @@ except Exception:
 # FUNCTION BASED VIEWS
 # CLASS BASED VIEWS
 
-def create_recipe(request):
-    if request.method == "POST" and RecipeForm:
-        form = RecipeForm(request.POST)
-        if form.is_valid():
-            recipe = form.save()
-            return redirect("recipe_detail", pk=recipe.pk)
-    elif RecipeForm:
-        form = RecipeForm()
-    else:
-        form = None
-    context = {
-        "form": form,
-    }
-    return render(request, "recipes/new.html", context)
+# def create_recipe(request):
+#     if request.method == "POST" and RecipeForm:
+#         form = RecipeForm(request.POST)
+#         if form.is_valid():
+#             recipe = form.save()
+#             return redirect("recipe_detail", pk=recipe.pk)
+#     elif RecipeForm:
+#         form = RecipeForm()
+#     else:
+#         form = None
+#     context = {
+#         "form": form,
+#     }
+#     return render(request, "recipes/new.html", context)
+
+
+class RecipeCreateView(CreateView):
+    model = Recipe
+    template_name = "recipes/new.html"
+    fields = ["name", "author", "description", "image"]
+    success_url = reverse_lazy("recipes_list")
 
 
 def change_recipe(request, pk):
