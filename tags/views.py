@@ -18,6 +18,7 @@ except Exception:
 #     return render(request, "tags/list.html", context)
 
 class TagListView(ListView):
+    paginate_by = 20
     model = Tag
     template_name = "tags/list.html"
 
