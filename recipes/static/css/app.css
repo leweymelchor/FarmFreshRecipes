@@ -157,3 +157,19 @@ margin-top: .5%;
 .control {
   text-align: right;
 }
+
+
+
+#tag-list-main {
+  margin: auto;
+  min-width: 300px;
+  max-width: 1500px;
+}
+
+.tag-grid {
+  display: inline-block;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  padding: 2em;
+  vertical-align: middle;
+}

@@ -65,7 +65,7 @@
         <main>
             <form method="post">
                 {% csrf_token %}
-                <p>Are you sure you want to delete "{{ recipe }}"?</p>
+                <p>Are you sure you want to delete"{{ tag }}"?</p>
                 {{ form.as_p }}
                 <div class="control">
                     <button id="button" class="btn btn-warning pull-right">Delete</button>

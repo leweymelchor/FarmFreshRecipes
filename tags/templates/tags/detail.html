@@ -1,11 +1,12 @@
 {% load static %}
+{% load markdownify %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Edit {{ recipe.name }} - Farm Fresh Recipes</title>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>New Recipe - Farm Fresh Recipes</title>
         <link rel="stylesheet" href="{% static 'css/app.css' %}"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
               rel="stylesheet"
@@ -54,6 +55,20 @@
                         <li>
                             <a class="text-body dropdown-item"
                                style="text-decoration: none"
+                               href="{% url 'tags_list' %}">
+                                <p class="text-warning">Tags</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-body dropdown-item"
+                               style="text-decoration: none"
+                               href="{% url 'tag_new' %}">
+                                <p class="text-warning">Create a tag</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-body dropdown-item"
+                               style="text-decoration: none"
                                href="{% url 'admin:index' %}">
                                 <p class="text-warning">Admin</p>
                             </a>
@@ -61,16 +76,49 @@
                     </ul>
                 </div>
             </nav>
+            <div class="position-relative">
+                <a class="text-body dropdown-item"
+                   style="text-decoration: none"
+                   href="{% url 'home' %}">
+                    <img class="position-absolute top-0 start-50 translate-middle"
+                         src="{% static "recipes/images/farm-house-logo.png" %}"
+                         height="50px"
+                         width="auto"/>
+                    <h1 class="text-center text-warning lh-lg">
+                        <b>Farm Fresh Recipes</b>
+                    </h1>
+                </a>
+            </div>
         </header>
-        <main>
-            <form method="post">
-                {% csrf_token %}
-                <p>Are you sure you want to delete "{{ recipe }}"?</p>
-                {{ form.as_p }}
-                <div class="control">
-                    <button id="button" class="btn btn-warning pull-right">Delete</button>
+        <main class="recipe-detail">
+            <div>
+                <a href="{% url 'tag_edit' tag.id %}">Edit</a>
+                <a href="{% url 'tag_delete' tag.id %}">Delete</a>
+            </div>
+            {% comment %} WORK HERE TO SHOW RECIPE NAME< TAGS< AND IMAGE {% endcomment %}
+            <h2>Recipes for {{ tag.name }}</h2>
+            <div>
+                {% for recipe in tag.recipes.all %}
+                    {% if recipe.image %}
+                        <img id="image"
+                             src="{{ recipe.image }}"
+                             class="pull-right"
+                             height="auto"
+                             width="300px">
+                    {% endif %}
                 </div>
-            </form>
+                <h1 >{{ recipe.name }}</h1>
+                {{ recipe.description | markdownify }}
+                <p class="pull-right">
+                    Created {{ recipe.created }} |
+                    Updated {{ recipe.updated }}
+                </p>
+            {% endfor %}
+            {% comment %} <p>{{ recipe.description }}</p> {% endcomment %}
         </main>
+        <footer class="container text-center text-body fs-6 fw-lighter">
+            <div class="col">Copyright 2022 by David "Lewey" Melchor</div>
+            <div class="col">The Finest Recipes Money Can Buy</div>
+        </footer>
     </body>
 </html>

@@ -70,6 +70,7 @@ class RecipeUpdateView(UpdateView):
 #     }
 #     return render(request, "recipes/list.html", context)
 
+
 class RecipeListView(ListView):
     model = Recipe
     template_name = "recipes/list.html"
