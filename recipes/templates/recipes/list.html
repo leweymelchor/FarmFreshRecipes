@@ -71,10 +71,10 @@
         </h1>
       </div>
     </header>
-    <main>
+    <main id="list-main">
       {% for recipe in recipes %}
         <div class="recipe-grid">
-          <div class="card" style="width: 18rem;">
+          <div id="card" class="card" style="width: 18rem;">
             {% if recipe.image %}
               <a href="{% url 'recipe_detail' recipe.pk %}">
                 <img class="card-img-top recipe-card-image"
