@@ -78,6 +78,9 @@
     </header>
     <main class="recipe-detail">
       <div>
+        <a href="{% url 'recipe_edit' recipe.id %}">Edit</a>
+      </div>
+      <div>
         {% if recipe.image %}
           <img id="image"
                src="{{ recipe.image }}"
