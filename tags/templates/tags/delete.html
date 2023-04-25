@@ -34,7 +34,7 @@
                             type="button"
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
-                        <span class="material-symbols-outlined text-warning">menu</span>
+                        <span class="material-symbols-outlined text-warning">MENU</span>
                     </button>
                     <ul class="dropdown-menu bg-secondary">
                         <li>
@@ -49,6 +49,20 @@
                                style="text-decoration: none"
                                href="{% url 'recipe_new' %}">
                                 <p class="text-warning">Write a recipe</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-body dropdown-item"
+                               style="text-decoration: none"
+                               href="{% url 'tags_list' %}">
+                                <p class="text-warning">Tags</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-body dropdown-item"
+                               style="text-decoration: none"
+                               href="{% url 'tag_new' %}">
+                                <p class="text-warning">Create a tag</p>
                             </a>
                         </li>
                         <li>
