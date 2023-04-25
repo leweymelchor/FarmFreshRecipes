@@ -3,9 +3,10 @@ from django.urls import reverse_lazy
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-
+from django.db.models import Avg
 
 from recipes.forms import RatingForm
+from recipes.models import Rating
 
 try:
     from recipes.forms import RecipeForm
@@ -72,7 +73,7 @@ class RecipeUpdateView(UpdateView):
 
 
 class RecipeListView(ListView):
-    paginate_by = 8
+    paginate_by = 3 #8
     model = Recipe
     template_name = "recipes/list.html"
 

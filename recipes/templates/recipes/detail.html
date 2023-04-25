@@ -139,6 +139,11 @@
       <ol>
         {% for step in recipe.steps.all %}<li>{{ step.directions }}</li>{% endfor %}
       </ol>
+      {% comment %} {% if recipe.ratings %} {% endcomment %}
+      <div>
+        <p>{{ recipe.rating_average }}</p>
+      </div>
+      {% comment %} {% endif %} {% endcomment %}
       <div>
         <form id="rating"
               method="post"

@@ -69,7 +69,14 @@ textarea {
 }
 
 url {
-  color:rgb(255, 232, 80)
+  color:rgb(255, 232, 80);
+}
+
+span {
+  color:rgb(256, 195, 68);
+  margin: auto;
+  bottom: auto;
+  padding-bottom: 25px;
 }
 
 /* body {
