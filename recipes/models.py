@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
+from django.db.models import Avg
 
 
 # Create your models here.
@@ -10,6 +11,9 @@ class Recipe(models.Model):
     image = models.URLField(null=True, blank=True, max_length=200)
     created = models.DateField(auto_now_add=True, blank=True, null=True)
     updated = models.DateField(auto_now=True, blank=True, null=True)
+
+    def rating_average(self):
+        return self.ratings.aggregate(avg_rating=Avg('value'))['avg_rating']
 
     def __str__(self):
         return self.name

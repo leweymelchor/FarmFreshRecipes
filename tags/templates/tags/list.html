@@ -1,15 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tags - Scrumptious</title>
-</head>
-
-<body>
-
-</body>
-
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <body>
+    {% comment %} Main Card List Start {% endcomment %}
+    <main id="tag-list-main">
+      {% for tag in tag_list %}
+        <div class="tag-grid">
+          <div id="card" class="card" style="width: 18rem;">
+            {% comment %} {% if tag.recipes.image %}
+              <a href="{% url 'recipe_detail' recipe.pk %}">
+                <img class="card-img-top recipe-card-image" src="{{ tag.recipes.image }}" height="auto" width="auto" alt="food pic"/>
+              </a>
+            {% endif %} {% endcomment %}
+            <div class="card-body bg-warning bg-opacity-75">
+              <center class="card-title m-2"><a class="recipe-card-title text-body fs-3"
+   style="text-decoration: none"
+   href="{% url 'tag_detail' tag.pk %}">{{ tag.name }}</a></center>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      <div class="pagination">
+        <span class="step-links">
+          {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+          {% endif %}
+          <span class="current">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</span>
+          {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+          {% endif %}
+        </span>
+      </div>
+    </main>
+    <footer style="position: fixed;
+                   bottom: 15px;
+                   width: 100%;
+                   height: 3rem;"
+            class="text-center text-body fs-6 fw-lighter">
+      <div class="col">Copyright 2022 by David "Lewey" Melchor</div>
+      <div class="col">The Finest Recipes Money Can Buy</div>
+    </footer>
+  </body>
+{% endblock content%}
