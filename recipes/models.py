@@ -13,7 +13,7 @@ class Recipe(models.Model):
     updated = models.DateField(auto_now=True, blank=True, null=True)
 
     def rating_average(self):
-        return self.ratings.aggregate(avg_rating=Avg('value'))['avg_rating']
+        return round(self.ratings.aggregate(avg_rating=Avg('value'))['avg_rating'], 1)
 
     def __str__(self):
         return self.name
