@@ -2,68 +2,6 @@
 {% load static %}
 {% block content %}
   <body>
-    <header>
-      <nav>
-        <div class="dropdown">
-          <button class="btn btn-secondary"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false">
-            <span class="material-symbols-outlined text-warning">MENU</span>
-          </button>
-          <ul class="dropdown-menu bg-secondary">
-            <li>
-              <a class="text-body dropdown-item"
-                 style="text-decoration: none"
-                 href="{% url 'home' %}">
-                <p class="text-warning">Recipes</p>
-              </a>
-            </li>
-            <li>
-              <a class="text-body dropdown-item"
-                 style="text-decoration: none"
-                 href="{% url 'recipe_new' %}">
-                <p class="text-warning">Write a recipe</p>
-              </a>
-            </li>
-            <li>
-              <a class="text-body dropdown-item"
-                 style="text-decoration: none"
-                 href="{% url 'tags_list' %}">
-                <p class="text-warning">Tags</p>
-              </a>
-            </li>
-            <li>
-              <a class="text-body dropdown-item"
-                 style="text-decoration: none"
-                 href="{% url 'tag_new' %}">
-                <p class="text-warning">Create a tag</p>
-              </a>
-            </li>
-            <li>
-              <a class="text-body dropdown-item"
-                 style="text-decoration: none"
-                 href="{% url 'admin:index' %}">
-                <p class="text-warning">Admin</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div class="position-relative">
-        <a class="text-body dropdown-item"
-           style="text-decoration: none"
-           href="{% url 'home' %}">
-          <img class="position-absolute top-0 start-50 translate-middle"
-               src="{% static "recipes/images/farm-house-logo.png" %}"
-               height="50px"
-               width="auto"/>
-          <h1 class="text-center text-warning lh-lg">
-            <b>Farm Fresh Recipes</b>
-          </h1>
-        </a>
-      </div>
-    </header>
     <main class="recipe-form">
       <form method="post">
         {% csrf_token %}
