@@ -32,9 +32,7 @@ class RecipeCreateView(PageTitleViewMixin, CreateView):
     template_name = "recipes/new.html"
     fields = ["name", "author", "description", "image"]
     success_url = reverse_lazy("recipes_list")
-
-    def get_title(self):
-        return "FFR - " + self.object.name
+    title = "FFR - New Recipe"
 
 
 class RecipeUpdateView(PageTitleViewMixin, UpdateView):
