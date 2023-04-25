@@ -73,7 +73,7 @@ class RecipeUpdateView(UpdateView):
 
 
 class RecipeListView(ListView):
-    paginate_by = 3 #8
+    paginate_by = 8
     model = Recipe
     template_name = "recipes/list.html"
 
