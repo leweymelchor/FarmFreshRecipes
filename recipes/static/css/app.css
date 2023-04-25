@@ -79,6 +79,11 @@ span {
   padding-bottom: 25px;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 /* body {
   display: flex;
   flex-direction: column;
