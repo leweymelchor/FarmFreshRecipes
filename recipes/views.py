@@ -9,6 +9,7 @@ from recipes.forms import RatingForm
 try:
     from recipes.forms import RecipeForm
     from recipes.models import Recipe
+    from recipes.models import Step
 except Exception:
     RecipeForm = None
     Recipe = None
@@ -73,6 +74,33 @@ class RecipeDeleteView(PageTitleViewMixin, DeleteView):
     def get_title(self):
         return "FFR - " + self.object.name
 
+
+# NEW Step View
+class StepCreateView(PageTitleViewMixin, CreateView):
+    model = Step
+    template_name = "recipes/new.html"
+    fields = ["name", "author", "description", "image"]
+    success_url = reverse_lazy("recipes_list")
+    title = "FFR - New Recipe"
+
+
+class StepUpdateView(PageTitleViewMixin, UpdateView):
+    model = Step
+    template_name = "recipes/edit.html"
+    fields = ["name", "author", "description", "image"]
+    success_url = reverse_lazy("recipes_list")
+
+    def get_title(self):
+        return "FFR - " + self.object.name
+
+
+class StepDeleteView(PageTitleViewMixin, DeleteView):
+    model = Step
+    template_name = "recipes/delete.html"
+    success_url = reverse_lazy("recipes_list")
+
+    def get_title(self):
+        return "FFR - " + self.object.name
 
 # FUNCTION BASED VIEWS
 def log_rating(request, recipe_id):
