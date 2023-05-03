@@ -21,14 +21,18 @@ p, th, td, ol, a{
   font-family: 'Pathway Extreme', sans-serif;
 }
 
+th {
+  font-size: 20px;
+}
+
 main {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 a,
-a:visited {
+a:visited, a:hover {
   text-decoration: none;
-  color: #208ACC;
+  color: rgb(256, 195, 68);
 }
 
 button.button {
@@ -89,21 +93,26 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100%;
-}
-
-footer {
-  height: 50px;
-  flex-shrink: 0;
-
 } */
 
-#image {
+footer {
+padding-top: 25px;
+}
+
+/* #image {
   border: 2px solid rgb(256, 195, 68);
   border-radius: 4px;
 }
 
 #card {
   border: 2px solid rgb(256, 195, 68);
+} */
+#company {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#card {
+  box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.3);
 }
 
 #rating {
@@ -116,10 +125,22 @@ footer {
 margin-top: .5%;
 }
 
+#button1 {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-bottom: 1%;
+}
+
+#button2 {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-bottom: 1%;
+}
+
 #list-main {
   margin: auto;
   min-width: 300px;
-  max-width: 1500px;
+  max-width: 1100px;
 }
 
 .recipe-grid {
@@ -170,9 +191,21 @@ margin-top: .5%;
   margin-right: auto;
   /* margin: 4em auto; */
   min-width: 300px;
-  max-width: 800px;
-
+  max-width: 1100px;
+  min-height: 100%;
+  background-size: cover;
+  background-color: rgb(112, 112, 112, .6);
+  /* box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3); */
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-radius: 25px;
+  box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.3);
 }
+
+/* #recipe-img {
+  border-radius: 25px;
+} */
 
 .pull-right {
   float: right;
@@ -182,8 +215,6 @@ margin-top: .5%;
 .control {
   text-align: right;
 }
-
-
 
 #tag-list-main {
   margin: auto;
@@ -198,3 +229,18 @@ margin-top: .5%;
   padding: 2em;
   vertical-align: middle;
 }
+
+#page {
+  color: #474747;
+}
+/* .buttons {
+  text-align:justify;
+}
+
+#edit {
+padding: 10px, 25px, 10px, 25px;
+}
+
+#delete {
+  padding: 10px, 25px, 10px, 25px;
+} */

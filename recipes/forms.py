@@ -4,7 +4,7 @@ from recipes.models import Rating
 try:
     from recipes.models import Recipe
     from recipes.models import Step
-    from recipes.models import Ingredient
+    # from recipes.models import Ingredient
     from recipes.models import FoodItem
 
     class RecipeForm(forms.ModelForm):

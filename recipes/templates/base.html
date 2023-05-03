@@ -37,53 +37,54 @@
       (https://images.unsplash.com/photo-1438979087584-602939abfd2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80);
       {% endcomment %}
       <body class="bg-secondary p-3 text-warning"
-      style="  background-image: url('https://images.unsplash.com/photo-1438979087584-602939abfd2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80');
-       height:100%; background-position: center; background-repeat: no-repeat; background-size: cover;">
+      style="  background-image: url('https://images.unsplash.com/photo-1518171802599-4cd16785f93a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2450&q=80');
+      background-position: center; background-repeat: no-repeat; background-size: 100% auto; background-position: top; background-attachment: fixed;">
        <header>
             <nav>
-              <div class="dropdown">
+              <div class="dropdown" id="menu">
                 <button
                   style="height:45px; width:50px;"
-                class="btn btn-secondary"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                  <span class="material-symbols-outlined text-warning">MENU</span>
+                  class="btn"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="background-color: #474747;"/>
+                  <span class="material-symbols-outlined text-secondary">MENU</span>
                 </button>
-                <ul class="dropdown-menu bg-secondary">
+                <ul class="dropdown-menu" style="background-color: #FCC9E2;">
                   <li>
                     <a class="text-body dropdown-item"
                        style="text-decoration: none"
                        href="{% url 'home' %}">
-                      <p class="text-warning">Recipes</p>
+                      <p class="text-secondary">Recipes</p>
                     </a>
                   </li>
                   <li>
                     <a class="text-body dropdown-item"
                        style="text-decoration: none"
                        href="{% url 'recipe_new' %}">
-                      <p class="text-warning">Write a recipe</p>
+                      <p class="text-secondary">Write a recipe</p>
                     </a>
                   </li>
                   <li>
                     <a class="text-body dropdown-item"
                        style="text-decoration: none"
                        href="{% url 'tags_list' %}">
-                      <p class="text-warning">Tags</p>
+                      <p class="text-secondary">Tags</p>
                     </a>
                   </li>
                   <li>
                     <a class="text-body dropdown-item"
                        style="text-decoration: none"
                        href="{% url 'tag_new' %}">
-                      <p class="text-warning">Create a tag</p>
+                      <p class="text-secondary">Create a tag</p>
                     </a>
                   </li>
                   <li>
                     <a class="text-body dropdown-item"
                        style="text-decoration: none"
                        href="{% url 'admin:index' %}">
-                      <p class="text-warning">Admin</p>
+                      <p class="text-secondary">Admin</p>
                     </a>
                   </li>
                 </ul>
@@ -98,7 +99,7 @@
                      height="50px"
                      width="auto"
                      alt="farm house logo"/>
-                <h1 class="text-center text-warning lh-lg">
+                <h1 id="company" class="text-center text-warning lh-lg">
                   <b>Farm Fresh Recipes</b>
                 </h1>
               </a>

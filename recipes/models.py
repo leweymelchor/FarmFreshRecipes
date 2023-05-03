@@ -1,6 +1,8 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db.models import Avg
+from fractions import Fraction
+import math
 
 
 # Create your models here.
@@ -36,11 +38,13 @@ class FoodItem(models.Model):
 
 
 class Ingredient(models.Model):
-    amount = models.IntegerField(
+    amount = models.DecimalField(
         default=1,
+        decimal_places=2,
+        max_digits=4,
         validators=[
             MaxValueValidator(20),
-            MinValueValidator(1)
+            MinValueValidator(0)
         ]
      )
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE,
@@ -49,7 +53,38 @@ class Ingredient(models.Model):
     food = models.ForeignKey(FoodItem, on_delete=models.PROTECT)
 
     def __str__(self):
-        return self.food.name
+        if int(self.amount) > 1 and self.food.name == "Tomato":
+            return (f'{str(self.food.name)}' + "es")
+        elif int(self.amount) > 1 and self.measure.abbreviation == "x":
+            return (f'{str(self.food.name)}' + "s")
+        else:
+            return self.food.name
+
+    def add_s_abbreviation(self):
+        if self.measure.abbreviation == "x":
+            return self.measure.abbreviation
+        elif int(self.amount) > 1:
+            return (f'{str(self.measure.abbreviation)}' + "s")
+        else:
+            return self.measure.abbreviation
+
+    def add_s_fooditem(self):
+        if int(self.amount) > 1 and self.food.name == "Tomato":
+            return (f'{str(self.food.name)}' + "es")
+        elif int(self.amount) > 1 and self.measure.abbreviation == "x":
+            return (f'{str(self.food.name)}' + "s")
+        else:
+            return self.food.name
+
+    def fraction(self):
+        if int(self.amount) < 1:
+            return Fraction(self.amount)
+        elif int(self.amount) >= 1 and self.amount % 1 != 0:
+            whole_number = int(self.amount) // 1
+            fraction = Fraction(self.amount) % 1
+            return f'{whole_number}' + ' ' + f'{fraction}'
+        else:
+            return round(self.amount, 0)
 
 
 class Step(models.Model):
@@ -76,4 +111,5 @@ class Rating(models.Model):
         )
 
     def __str__(self):
-        return f"{self.recipe} is {self.value}  Out of 5"
+        if self.rating:
+            return f"{self.recipe} is {self.value}  Out of 5"
