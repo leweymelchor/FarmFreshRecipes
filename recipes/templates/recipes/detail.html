@@ -5,58 +5,50 @@
   <body>
     <main class="recipe-detail">
       <div>
-        <a href="{% url 'recipe_edit' recipe.id %}">Edit</a>
-        <a href="{% url 'recipe_delete' recipe.id %}">Delete</a>
-      </div>
-      <div>
         {% if recipe.image %}
-          <img id="image"
-               src="{{ recipe.image }}"
+          <img src="{{ recipe.image }}"
                class="pull-right"
                height="auto"
-               width="300px">
+               width="300px"
+               alt="food picture"
+               style="border-radius: 25px; margin-top: 50px;"/>
         {% endif %}
       </div>
-      <h1 >{{ recipe.name }}</h1>
+      <h1><b>{{ recipe.name }}</b></h1>
       <p>
         Tags:
         {% for tag in recipe.tags.all %}{{ tag.name }},&nbsp{% endfor %}
       </p>
       {{ recipe.description | markdownify }}
-      {% comment %} <p>{{ recipe.description }}</p> {% endcomment %}
-      <h2>Ingredients</h2>
+      <h2><b>Ingredients:</b></h2>
       <table>
         <thead>
           <tr>
-            <th colspan="2">Amount</th>
-            <th>Food item</th>
-            <th>Notes</th>
+            <th colspan="2"><b>Amount:</b></th>
+            <th><b>Food item:</b></th>
+            <th><b>Notes:</b></th>
           </tr>
         </thead>
         <tbody>
           {% for ingredient in recipe.ingredients.all %}
             <tr>
-              <td>{{ ingredient.amount }}</td>
-              <td>{{ ingredient.measure.abbreviation }}</td>
-              <td>{{ ingredient.food.name }}</td>
-              <td>{{ ingredient.food.note }}</td>
+              <td style="width: 20%">{{ ingredient.fraction }}</td>
+              <td style="width: 10%">{{ ingredient.add_s_abbreviation }}</td>
+              <td style="width: 30%">{{ ingredient.add_s_fooditem }}</td>
+              <td style="width: 40%">{{ ingredient.food.note }}</td>
             </tr>
           {% endfor %}
         </tbody>
       </table>
-      <p class="pull-right">
-        Created {{ recipe.created }} |
-        Updated {{ recipe.updated }}
-      </p>
-      <h2>Steps</h2>
+      <h2><b>Steps:</b></h2>
       <ol>
         {% for step in recipe.steps.all %}<li>{{ step.directions }}</li>{% endfor %}
       </ol>
-      {% comment %} {% if recipe.ratings %} {% endcomment %}
-      <div>
-        <p>{{ recipe.rating_average }}</p>
-      </div>
-      {% comment %} {% endif %} {% endcomment %}
+      {% if recipe.rating %}
+        <div>
+          <p>{{ recipe.rating_average }}</p>
+        </div>
+      {% endif %}
       <div>
         <form id="rating"
               method="post"
@@ -64,14 +56,16 @@
           {% csrf_token %}
           {{ rating_form.as_p }}
           <button id="button" class="btn btn-warning pull-right">Rate</button>
+          <a href="{% url 'recipe_edit' recipe.id %}" id="button1" class="btn btn-warning text-dark mx-auto" href="#" role="button">Edit</a>
+          <a href="{% url 'recipe_delete' recipe.id %}" id="button2" class="btn btn-warning text-dark mx-auto" href="#" role="button">Delete</a>
         </form>
       </div>
+      <p>
+        Created {{ recipe.created }} |
+        Updated {{ recipe.updated }}
+      </p>
     </main>
-    <footer style="position: fixed;
-                   bottom: 15px;
-                   width: 100%;
-                   height: 3rem;"
-            class="text-center text-body fs-6 fw-lighter">
+    <footer class="text-center text-body fs-6 fw-lighter">
       <div class="col">Copyright 2022 by David "Lewey" Melchor</div>
       <div class="col">The Finest Recipes Money Can Buy</div>
     </footer>

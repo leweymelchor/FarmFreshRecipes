@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %} FFR - {{ tag.name }}{% endblock title %}
 {% block content %}
     <body>
         <main>
             <form method="post">
                 {% csrf_token %}
-                <p>Are you sure you want to delete"{{ tag }}"?</p>
+                <p style="color: rgb(256, 195, 68)">Are you sure you want to delete"{{ tag }}"?</p>
                 {{ form.as_p }}
                 <div class="control">
                     <button id="button" class="btn btn-warning pull-right">Delete</button>
