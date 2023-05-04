@@ -119,5 +119,5 @@ class Rating(models.Model):
         )
 
     def __str__(self):
-        if self.rating:
+        if self.recipe:
             return f"{self.recipe} is {self.value}  Out of 5"
