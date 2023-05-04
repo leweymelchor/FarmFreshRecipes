@@ -5,38 +5,55 @@
 {% block content %}
     <body>
         <main class="recipe-detail">
-            <div>
-                <a href="{% url 'tag_edit' tag.id %}">Edit</a>
-                <a href="{% url 'tag_delete' tag.id %}">Delete</a>
+            <h2 style="text-align: center;"><b>Recipes that are: {{ tag.name }}</b></h2>
+            <div style="text-align: center;">
+                <a href="{% url 'tag_edit' tag.id %}" id="button1" class="btn btn-warning text-dark" href="#" role="button" style="margin-right:25px; padding-right: 19px; padding-left: 19px">Edit</a>
+                <a href="{% url 'tag_delete' tag.id %}" id="button2" class="btn btn-warning text-dark" href="#" role="button">Delete</a>
             </div>
-            {% comment %} WORK HERE TO SHOW RECIPE NAME< TAGS< AND IMAGE {% endcomment %}
-            <h2>Recipes for {{ tag.name }}</h2>
-            <div>
+            {% comment %} sdfhjaks {% endcomment %}
+            <div id="list-main">
                 {% for recipe in tag.recipes.all %}
-                    {% if recipe.image %}
-                        <img id="image"
-                             src="{{ recipe.image }}"
-                             class="pull-right"
-                             height="auto"
-                             width="300px">
-                    {% endif %}
-                </div>
-                <h1 >{{ recipe.name }}</h1>
-                {{ recipe.description | markdownify }}
-                <p class="pull-right">
-                    Created {{ recipe.created }} |
-                    Updated {{ recipe.updated }}
-                </p>
-            {% endfor %}
-            {% comment %} <p>{{ recipe.description }}</p> {% endcomment %}
+                    <div class="recipe-grid">
+                        <div id="card" class="card border-dark" style="width: 18rem;">
+                            {% if recipe.image %}
+                                <img class="card-img-top recipe-card-image"
+                                    src="{{ recipe.image }}"
+                                    height="auto"
+                                    width="auto"
+                                    alt="food pic"
+                                />
+                            {% endif %}
+                            <div class="card-body bg-dark bg-opacity-75">
+                                <center class="card-title m-2">
+                                    <h3><b>{{ recipe.name }}</b></h3>
+                                </center>
+                                <p class="text-body fs-6 fw-lighter text-center">
+                                    {{ recipe.description_shortened | markdownify }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            {% comment %} <div class="pagination">
+                <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a id="page" href="?page=1">&laquo; first</a>
+                    <a id="page" href="?page={{ page_obj.previous_page_number }}">previous</a>
+                {% endif %}
+                {% if page_obj.has_next %}
+                    <span id="page" class="current">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</span>
+                {% endif %}
+                {% if page_obj.has_next %}
+                    <a id="page" href="?page={{ page_obj.next_page_number }}">next</a>
+                    <a id="page" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                {% endif %}
+                </span>
+            </div> {% endcomment %}
         </main>
-        <footer style="position: fixed;
-                       bottom: 15px;
-                       width: 100%;
-                       height: 3rem;"
-                class="text-center text-body fs-6 fw-lighter">
+        <footer class="text-center text-body fs-6 fw-lighter">
             <div class="col">Copyright 2022 by David "Lewey" Melchor</div>
             <div class="col">The Finest Recipes Money Can Buy</div>
-        </footer>
+          </footer>
     </body>
-{% endblock content%}
+{% endblock content %}

@@ -36,6 +36,7 @@ class TagListView(PageTitleViewMixin, ListView):
 
 
 class TagDetailView(PageTitleViewMixin, DetailView):
+    # paginate_by = 3
     model = Tag
     template_name = "tags/detail.html"
 

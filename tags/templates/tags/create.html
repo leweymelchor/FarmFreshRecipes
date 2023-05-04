@@ -3,7 +3,7 @@
 {% block title %} FFR - New Tag{% endblock title %}
 {% block content %}
     <body>
-        <main class="recipe-form">
+        <main class="recipe-form recipe-detail" style="padding-right: 50px; padding-top: 35px; padding-bottom: 25px;">
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
@@ -13,7 +13,7 @@
             </form>
         </main>
         <footer style="position: fixed;
-                       bottom: 15px;
+                       bottom: 30px;
                        width: 100%;
                        height: 3rem;"
                 class="text-center text-body fs-6 fw-lighter">

@@ -20,6 +20,14 @@ class Recipe(models.Model):
     def __str__(self):
         return self.name
 
+    def description_shortened(self):
+        short = ""
+        if len(str(self.description)) > 120:
+            short = (str(self.description)[:120])
+        else:
+            short = str(self.description)
+        return short
+
 
 class Measure(models.Model):
     name = models.CharField(max_length=30, unique=True)

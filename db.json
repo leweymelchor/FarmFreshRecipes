@@ -1,0 +1,2227 @@
+[
+{
+    "model": "recipes.recipe",
+    "pk": 13,
+    "fields": {
+        "name": "Tomato Basil Linguine",
+        "author": "Lewey",
+        "description": "A delicious and fun recipe great for the whole  family.",
+        "image": "https://theclevermeal.com/wp-content/uploads/2022/05/tomato-basil-pasta_1-1-scaled.jpg",
+        "created": "2023-05-01",
+        "updated": "2023-05-01"
+    }
+},
+{
+    "model": "recipes.recipe",
+    "pk": 14,
+    "fields": {
+        "name": "Zuppa Toscana",
+        "author": "Lewey",
+        "description": "An authentic replication of a chain restaurant favorite!",
+        "image": "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipe%20Ramp%20Up%2F2021-12-Zuppa-Toscana%2Fkitchn_deckitchn_dec4191-1",
+        "created": "2023-05-01",
+        "updated": "2023-05-01"
+    }
+},
+{
+    "model": "recipes.recipe",
+    "pk": 15,
+    "fields": {
+        "name": "Tonkotsu Ramen",
+        "author": "Lewey",
+        "description": "A quick way to elevate an authentic Japanese favorite. This is more of a house-hold easy recipe, thats quick to prepare, easy to make, and absolutely delicious!",
+        "image": "https://glebekitchen.com/wp-content/uploads/2017/04/tonkotsuramentop.jpg",
+        "created": "2023-05-01",
+        "updated": "2023-05-01"
+    }
+},
+{
+    "model": "recipes.recipe",
+    "pk": 16,
+    "fields": {
+        "name": "Pulled Pork Sandwhich",
+        "author": "Lewey",
+        "description": "Fun to prepare and feeds the whole family! Get ready to get your hands dirty with this scrumptious take on a Texan favorite!",
+        "image": "https://assets.bonappetit.com/photos/62d1e3ef07a1e6add71de80b/1:1/w_2560%2Cc_limit/0715-pulled-pork-recipe-lede.jpg",
+        "created": "2023-05-01",
+        "updated": "2023-05-01"
+    }
+},
+{
+    "model": "recipes.recipe",
+    "pk": 17,
+    "fields": {
+        "name": "Gumbo (Authentic New-Orleans Style)",
+        "author": "Lewey",
+        "description": "Get down and dirty with this Southern favorite! Prepare your taste buds, because this luscious dish hits on many levels!\r\n\r\nCalories: 464kcal | Carbohydrates: 5g | Protein: 12g | Fat: 29g | Saturated Fat: 3g | Cholesterol: 116mg | Sodium: 1303mg | Potassium: 371mg | Fiber: 1g | Sugar: 1g | Vitamin A: 230IU | Vitamin C: 38.4mg | Calcium: 94mg | Iron: 1.7mg",
+        "image": "https://savortheflavour.com/wp-content/uploads/2022/08/Gumbo-Tasty-1200.jpg",
+        "created": "2023-05-01",
+        "updated": "2023-05-01"
+    }
+},
+{
+    "model": "recipes.recipe",
+    "pk": 18,
+    "fields": {
+        "name": "Ginger Scallion Noodles",
+        "author": "Lewey",
+        "description": "The noodles are just a vessel for this savory, gingery, simple weeknight sauce. Double the batch, and you’ll always have a way to brighten up simple grilled or pan-roasted chops, roasted veggies, or grain bowls.",
+        "image": "https://thefoodiediaries.co/wp-content/uploads/2022/01/img_1432-1.jpg",
+        "created": "2023-05-01",
+        "updated": "2023-05-01"
+    }
+},
+{
+    "model": "recipes.recipe",
+    "pk": 19,
+    "fields": {
+        "name": "Fried Chicken",
+        "author": "Lewey",
+        "description": "This dish speaks for itself!",
+        "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/11/2/0/DV1510H_fried-chicken-recipe-10_s4x3.jpg.rend.hgtvcom.406.406.suffix/1568222255998.jpeg",
+        "created": "2023-05-01",
+        "updated": "2023-05-01"
+    }
+},
+{
+    "model": "recipes.recipe",
+    "pk": 20,
+    "fields": {
+        "name": "Shrimp and Oyster Po'boy",
+        "author": "Lewey",
+        "description": "Although you will see this sandwich on many different menus now, this is a local favorite from New Orleans. Most commonly, it is filled with only fried shrimp, but this version, which includes fried oysters in the mix, has become more and more popular over the years.",
+        "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2022/06/09/0/FNM_070122-Shrimp-and-Oyster-Po-Boys_s4x3.jpg.rend.hgtvcom.616.462.suffix/1654796733849.jpeg",
+        "created": "2023-05-01",
+        "updated": "2023-05-01"
+    }
+},
+{
+    "model": "recipes.measure",
+    "pk": 1,
+    "fields": {
+        "name": "Cup",
+        "abbreviation": "cup"
+    }
+},
+{
+    "model": "recipes.measure",
+    "pk": 2,
+    "fields": {
+        "name": "Tablespoon",
+        "abbreviation": "Tbsp"
+    }
+},
+{
+    "model": "recipes.measure",
+    "pk": 3,
+    "fields": {
+        "name": "Teaspoon",
+        "abbreviation": "tsp"
+    }
+},
+{
+    "model": "recipes.measure",
+    "pk": 4,
+    "fields": {
+        "name": "Stick",
+        "abbreviation": "stick"
+    }
+},
+{
+    "model": "recipes.measure",
+    "pk": 5,
+    "fields": {
+        "name": "Ounce",
+        "abbreviation": "oz"
+    }
+},
+{
+    "model": "recipes.measure",
+    "pk": 6,
+    "fields": {
+        "name": "Fluid Ounce",
+        "abbreviation": "fl. oz."
+    }
+},
+{
+    "model": "recipes.measure",
+    "pk": 7,
+    "fields": {
+        "name": "Pound",
+        "abbreviation": "lb"
+    }
+},
+{
+    "model": "recipes.measure",
+    "pk": 8,
+    "fields": {
+        "name": "Gram",
+        "abbreviation": "g"
+    }
+},
+{
+    "model": "recipes.measure",
+    "pk": 9,
+    "fields": {
+        "name": "Amount",
+        "abbreviation": "x"
+    }
+},
+{
+    "model": "recipes.measure",
+    "pk": 10,
+    "fields": {
+        "name": "Clove",
+        "abbreviation": "clove"
+    }
+},
+{
+    "model": "recipes.fooditem",
+    "pk": 1,
+    "fields": {
+        "name": "Tomato",
+        "note": "Large, diced into 1/2 inch cubes"
+    }
+},
+{
+    "model": "recipes.fooditem",
+    "pk": 2,
+    "fields": {
+        "name": "Brie",
+        "note": "all of the rind removed"
+    }
+},
+{
+    "model": "recipes.fooditem",
+    "pk": 3,
+    "fields": {
+        "name": "Fresh Basil",
+        "note": "cut into strips"
+    }
+},
+{
+    "model": "recipes.fooditem",
+    "pk": 4,
+    "fields": {
+        "name": "Garlic",
+        "note": "peel and finely mince"
+    }
+},
+{
+    "model": "recipes.fooditem",
+    "pk": 5,
+    "fields": {
+        "name": "Olive Oil",
+        "note": ""
+    }
+},
+{
+    "model": "recipes.fooditem",
+    "pk": 6,
+    "fields": {
+        "name": "Salt",
+        "note": ""
+    }
+},
+{
+    "model": "recipes.fooditem",
+    "pk": 7,
+    "fields": {
+        "name": "Freshly Ground Black Pepper",
+        "note": ""
+    }
+},
+{
+    "model": "recipes.fooditem",
+    "pk": 8,
+    "fields": {
+        "name": "Linguine",
+        "note": "or pasta of choice"
+    }
+},
+{
+    "model": "recipes.ingredient",
+    "pk": 1,
+    "fields": {
+        "amount": "2.25",
+        "recipe": 13,
+        "measure": 9,
+        "food": 1
+    }
+},
+{
+    "model": "recipes.ingredient",
+    "pk": 2,
+    "fields": {
+        "amount": "1.00",
+        "recipe": 13,
+        "measure": 7,
+        "food": 2
+    }
+},
+{
+    "model": "recipes.ingredient",
+    "pk": 3,
+    "fields": {
+        "amount": "1.00",
+        "recipe": 13,
+        "measure": 1,
+        "food": 3
+    }
+},
+{
+    "model": "recipes.ingredient",
+    "pk": 4,
+    "fields": {
+        "amount": "3.00",
+        "recipe": 13,
+        "measure": 10,
+        "food": 4
+    }
+},
+{
+    "model": "recipes.ingredient",
+    "pk": 5,
+    "fields": {
+        "amount": "1.00",
+        "recipe": 13,
+        "measure": 1,
+        "food": 5
+    }
+},
+{
+    "model": "recipes.ingredient",
+    "pk": 6,
+    "fields": {
+        "amount": "0.50",
+        "recipe": 13,
+        "measure": 3,
+        "food": 6
+    }
+},
+{
+    "model": "recipes.ingredient",
+    "pk": 7,
+    "fields": {
+        "amount": "0.50",
+        "recipe": 13,
+        "measure": 3,
+        "food": 7
+    }
+},
+{
+    "model": "recipes.ingredient",
+    "pk": 8,
+    "fields": {
+        "amount": "1.00",
+        "recipe": 13,
+        "measure": 7,
+        "food": 8
+    }
+},
+{
+    "model": "recipes.step",
+    "pk": 1,
+    "fields": {
+        "recipe": 13,
+        "order": 1,
+        "directions": "- At least 2 hours before serving, combine the\r\ntomatoes, Brie, basil, garlic, the 1 cup olive\r\noil, and salt and pepper in a large bowl.",
+        "food_items": []
+    }
+},
+{
+    "model": "recipes.step",
+    "pk": 2,
+    "fields": {
+        "recipe": 13,
+        "order": 2,
+        "directions": "In a large pot of salted boiling water cook the\r\npasta to aldente",
+        "food_items": []
+    }
+},
+{
+    "model": "recipes.step",
+    "pk": 3,
+    "fields": {
+        "recipe": 13,
+        "order": 3,
+        "directions": "Drain the pasta and immediately toss with\r\nthe tomato mixture.",
+        "food_items": []
+    }
+},
+{
+    "model": "recipes.step",
+    "pk": 4,
+    "fields": {
+        "recipe": 13,
+        "order": 4,
+        "directions": "Serve at once, passing the peppermill, and the grated Parmigiano-\r\nReggiano cheese if you like",
+        "food_items": []
+    }
+},
+{
+    "model": "recipes.step",
+    "pk": 5,
+    "fields": {
+        "recipe": 14,
+        "order": 1,
+        "directions": "Heat a large dutch oven or heavy bottomed soup pot over MED-HIGH heat. Add a small drizzle of oil, then brown sausage, crumbling as it cooks. Drain well, then remove to a plate.",
+        "food_items": []
+    }
+},
+{
+    "model": "recipes.step",
+    "pk": 6,
+    "fields": {
+        "recipe": 14,
+        "order": 2,
+        "directions": "Fry bacon is residual sausage grease until crisp, then remove to plate with the sausage. Drain all but 1 - 1 1/2 Tbsp of bacon grease.",
+        "food_items": []
+    }
+},
+{
+    "model": "recipes.step",
+    "pk": 7,
+    "fields": {
+        "recipe": 14,
+        "order": 3,
+        "directions": "Add onion to pot and cook 5 minutes, adding garlic the last minute.",
+        "food_items": []
+    }
+},
+{
+    "model": "recipes.step",
+    "pk": 8,
+    "fields": {
+        "recipe": 14,
+        "order": 4,
+        "directions": "Sprinkle flour over onion and garlic in pot, then stir to combine. Pour in chicken stock, stirring as you pour. Add in potatoes and bring to a boil.",
+        "food_items": []
+    }
+},
+{
+    "model": "recipes.step",
+    "pk": 9,
+    "fields": {
+        "recipe": 14,
+        "order": 5,
+        "directions": "Gently boil about 15 minutes, or until potatoes are fork-tender. Add in cooked sausage, most of the bacon, heavy cream and kale. Stir and cook 5-10 minutes until kale is wilted.",
+        "food_items": []
+    }
+},
+{
+    "model": "recipes.step",
+    "pk": 10,
+    "fields": {
+        "recipe": 14,
+        "order": 6,
+        "directions": "Taste and season with salt, pepper and red pepper flakes if desired. Top with remaining bacon and enjoy!",
+        "food_items": []
+    }
+},
+{
+    "model": "recipes.step",
+    "pk": 11,
+    "fields": {
+        "recipe": 15,
+        "order": 1,
+        "directions": "### Add Additional Spices\r\n\r\nThink of instant ramen as a blank canvas, so experiment to find the seasonings and spices that appeal to your taste preferences and complement the flavor of instant ramen you have on hand.\r\n\r\n- **Ground White Pepper:** Yamashita says that in Japan, ground white pepper is a popular spice to add to ramen. There are many different varieties and flavors of instant ramen available in Japan, such as seafood, curry, kimchi and Chinese chili. So, depending on the flavor and accompanying seasoning packet, additional spices might not be needed – use your discretion!\r\n- **Furikake:** The seasoning blend that includes nori (dried seaweed) and sesame seeds is traditionally sprinkled over rice, but Yamashita says that it wouldn’t hurt to add it to ramen if you like those flavors.",
+        "food_items": []
+    }
+},
+{
+    "model": "recipes.step",
+    "pk": 12,
+    "fields": {
+        "recipe": 15,
+        "order": 2,
+        "directions": "### Add Aromatics\r\n\r\n- **Scallions:** According to Yamashita, people in Japan often top off ramen with scallions. “There is such a thing as scallion ramen, so it makes sense to us,” she says.\r\n- **Ginger or Garlic:** Although adding garlic or ginger isn’t common in Japan, it’s an easy way to flavor the water as the noodles boil. For her [Afternoon Ramen](https://www.foodnetwork.com/recipes/afternoon-ramen-3529178), Claire Thomas flavors her broth with ginger, garlic, green onions and leeks.",
+        "food_items": []
+    }
+},
+{
+    "model": "recipes.step",
+    "pk": 13,
+    "fields": {
+        "recipe": 15,
+        "order": 3,
+        "directions": "### Change the Cooking Liquid\r\n\r\nJapanese instant ramen contains seasoning packets that are either in liquid or powder form, both of which need to be mixed with water and boiled to make the broth. Depending on the flavor of ramen, the seasoning packet may already include ingredients to make a flavorful broth. Common instant ramen broth flavors that are available in Japan include pork bone, soy sauce, salty chicken and miso. Depending on the variety of instant ramen, you can play with different types of broths and seasonings to impart extra flavor.\r\n\r\n- **Try boiling noodles in low-sodium chicken broth**\r\n- **Add a splash of warmed bone broth at the end**\r\n- **Mix in miso paste whisked in warm water**",
+        "food_items": []
+    }
+},
+{
+    "model": "recipes.step",
+    "pk": 14,
+    "fields": {
+        "recipe": 15,
+        "order": 4,
+        "directions": "### Finish It with Sauce\r\n\r\nDepending on the flavor profile of the instant ramen, you may not need to add additional sauces such as the below. In Japan, Yamashita says that chili oil, chili crisp, Tabasco and sriracha are popular spicy ramen sauces.",
+        "food_items": []
+    }
+},
+{
+    "model": "tags.tag",
+    "pk": 1,
+    "fields": {
+        "name": "Yum",
+        "recipes": []
+    }
+},
+{
+    "model": "tags.tag",
+    "pk": 2,
+    "fields": {
+        "name": "Delicious",
+        "recipes": []
+    }
+},
+{
+    "model": "tags.tag",
+    "pk": 4,
+    "fields": {
+        "name": "Zesty",
+        "recipes": []
+    }
+},
+{
+    "model": "tags.tag",
+    "pk": 5,
+    "fields": {
+        "name": "Slimy",
+        "recipes": []
+    }
+},
+{
+    "model": "tags.tag",
+    "pk": 6,
+    "fields": {
+        "name": "Awesome",
+        "recipes": []
+    }
+},
+{
+    "model": "tags.tag",
+    "pk": 7,
+    "fields": {
+        "name": "Dope",
+        "recipes": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$320000$NTB8gjPpm4B43wuRwkb5Zc$FVT0QdduWAsCgf7SaV9F/sRLia0tvukDeu6n9DVpLYs=",
+        "last_login": "2023-04-22T06:51:52.987Z",
+        "is_superuser": true,
+        "username": "lewey",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-04-22T06:01:42.417Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ahwira2rflv4w9a8fujal7qoni6q2ljn",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFAGR4u3fsNZBhAqgaS0q6M_65NutDtPefcFwu4rTVsIy9hTuzMJDv9bhHpkdsO0h3brXPqbV3myHeFH3Twa0_5eTncv4OKo35rSMZPE2RjUWmJIoGySGCz0VG7ghaEcuTJEQLmoooQTnpbDDpdvAX2_gDRmDeI:1pq768:y93C5BoRcMKzpsLaEJXUH9ftEIYQjvyckIgTSRlxk6k",
+        "expire_date": "2023-05-06T06:51:52.988Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2023-04-22T06:52:00.873Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "3",
+        "object_repr": "Zuppa Toscana",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2023-04-22T17:12:20.314Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "tags",
+            "tag"
+        ],
+        "object_id": "1",
+        "object_repr": "Yum",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2023-04-22T17:12:30.647Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "tags",
+            "tag"
+        ],
+        "object_id": "2",
+        "object_repr": "Delicious",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2023-04-22T21:44:45.647Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "rating"
+        ],
+        "object_id": "2",
+        "object_repr": "Tomato Basil Linguine is 3  Out of 5",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2023-04-22T21:44:45.651Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "rating"
+        ],
+        "object_id": "1",
+        "object_repr": "Tomato Basil Linguine is 5  Out of 5",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2023-04-22T21:55:01.076Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "rating"
+        ],
+        "object_id": "2",
+        "object_repr": "Tomato Basil Linguine is 5  Out of 5",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2023-05-01T18:50:11.235Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "12",
+        "object_repr": "jhgdygrse",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2023-05-01T18:50:11.237Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "11",
+        "object_repr": "asdfasdfadsghrtyjftew",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2023-05-01T18:50:11.238Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "10",
+        "object_repr": "asdfasdfsadf",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2023-05-01T18:50:11.240Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "9",
+        "object_repr": "asdgfhjasdfguasf",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2023-05-01T18:50:11.241Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "8",
+        "object_repr": "jyuityusdf",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2023-05-01T18:50:11.241Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "7",
+        "object_repr": "asfgrtgjhwewrqef",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2023-05-01T18:50:11.242Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "6",
+        "object_repr": "sdfasdf",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2023-05-01T18:50:11.243Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "2",
+        "object_repr": "Zuppa Toscana",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2023-05-01T18:50:11.244Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "1",
+        "object_repr": "Tomato Basil Linguine",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2023-05-01T19:50:38.836Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "13",
+        "object_repr": "Tomato Basil Linguine",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2023-05-01T19:51:44.300Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "14",
+        "object_repr": "Zuppa Toscana",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2023-05-01T19:53:41.958Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "15",
+        "object_repr": "Tonkotsu Ramen",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2023-05-01T19:55:32.010Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "16",
+        "object_repr": "Pulled Pork Sandwhich",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2023-05-01T19:58:07.437Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "17",
+        "object_repr": "Gumbo (Authentic New-Orleans Style)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2023-05-01T19:59:24.908Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "18",
+        "object_repr": "Ginger Scallion Noodles",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2023-05-01T20:00:44.279Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "19",
+        "object_repr": "Fried Chicken",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2023-05-01T20:02:00.921Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "20",
+        "object_repr": "Shrimp and Oyster Po'boy",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2023-05-01T20:03:12.984Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "step"
+        ],
+        "object_id": "1",
+        "object_repr": "Tomato Basil Linguine step 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2023-05-01T20:03:27.784Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "step"
+        ],
+        "object_id": "2",
+        "object_repr": "Tomato Basil Linguine step 2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2023-05-01T20:03:44.616Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "step"
+        ],
+        "object_id": "3",
+        "object_repr": "Tomato Basil Linguine step 3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2023-05-01T20:03:59.372Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "step"
+        ],
+        "object_id": "4",
+        "object_repr": "Tomato Basil Linguine step 4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2023-05-01T20:04:22.950Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "step"
+        ],
+        "object_id": "5",
+        "object_repr": "Zuppa Toscana step 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2023-05-01T20:04:35.157Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "step"
+        ],
+        "object_id": "6",
+        "object_repr": "Zuppa Toscana step 2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2023-05-01T20:04:48.401Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "step"
+        ],
+        "object_id": "7",
+        "object_repr": "Zuppa Toscana step 3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2023-05-01T20:05:07.145Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "step"
+        ],
+        "object_id": "8",
+        "object_repr": "Zuppa Toscana step 4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2023-05-01T20:05:21.551Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "step"
+        ],
+        "object_id": "9",
+        "object_repr": "Zuppa Toscana step 5",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2023-05-01T20:05:34.270Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "step"
+        ],
+        "object_id": "10",
+        "object_repr": "Zuppa Toscana step 6",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2023-05-01T20:06:30.286Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "step"
+        ],
+        "object_id": "11",
+        "object_repr": "Tonkotsu Ramen step 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2023-05-01T20:06:48.026Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "step"
+        ],
+        "object_id": "12",
+        "object_repr": "Tonkotsu Ramen step 2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2023-05-01T20:07:02.842Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "step"
+        ],
+        "object_id": "13",
+        "object_repr": "Tonkotsu Ramen step 3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2023-05-01T20:07:25.490Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "step"
+        ],
+        "object_id": "14",
+        "object_repr": "Tonkotsu Ramen step 4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2023-05-01T20:08:43.015Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "17",
+        "object_repr": "Gumbo (Authentic New-Orleans Style)",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2023-05-01T20:09:17.970Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "recipe"
+        ],
+        "object_id": "17",
+        "object_repr": "Gumbo (Authentic New-Orleans Style)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2023-05-01T20:23:02.562Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "1",
+        "object_repr": "Cups",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2023-05-01T20:23:18.117Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "2",
+        "object_repr": "Tablespoon",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2023-05-01T20:23:26.679Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "3",
+        "object_repr": "Teaspoon",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2023-05-01T20:23:34.280Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "4",
+        "object_repr": "stick",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2023-05-01T20:23:46.609Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "5",
+        "object_repr": "Ounces",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2023-05-01T20:23:57.812Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "6",
+        "object_repr": "Fluid Ounce",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2023-05-01T20:24:12.926Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "7",
+        "object_repr": "Pounds",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2023-05-01T20:24:19.679Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "8",
+        "object_repr": "Grams",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2023-05-01T20:24:45.868Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "9",
+        "object_repr": "Amount",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2023-05-01T20:26:28.824Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "fooditem"
+        ],
+        "object_id": "1",
+        "object_repr": "Tomato",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2023-05-01T20:26:36.845Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "1",
+        "object_repr": "Tomato",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2023-05-01T20:27:19.042Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "fooditem"
+        ],
+        "object_id": "2",
+        "object_repr": "Brie",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2023-05-01T20:27:28.454Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "2",
+        "object_repr": "Brie",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2023-05-02T13:54:44.351Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "1",
+        "object_repr": "Cups",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Abbreviation\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2023-05-02T13:55:19.176Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "fooditem"
+        ],
+        "object_id": "3",
+        "object_repr": "Fresh Basil",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2023-05-02T13:55:36.170Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "3",
+        "object_repr": "Fresh Basil",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2023-05-02T13:56:06.635Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "10",
+        "object_repr": "Clove",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2023-05-02T13:59:53.591Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "fooditem"
+        ],
+        "object_id": "4",
+        "object_repr": "Garlic Clove",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2023-05-02T13:59:59.332Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "4",
+        "object_repr": "Garlic Clove",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2023-05-02T14:01:34.052Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "fooditem"
+        ],
+        "object_id": "5",
+        "object_repr": "olive oil",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2023-05-02T14:01:44.533Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "fooditem"
+        ],
+        "object_id": "5",
+        "object_repr": "Olive Oil",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2023-05-02T14:01:45.529Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "5",
+        "object_repr": "Olive Oil",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2023-05-02T14:02:26.745Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "fooditem"
+        ],
+        "object_id": "6",
+        "object_repr": "Salt",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2023-05-02T14:03:45.447Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "6",
+        "object_repr": "Salt",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2023-05-02T14:04:15.231Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "fooditem"
+        ],
+        "object_id": "7",
+        "object_repr": "Freshly Ground Black Pepper",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2023-05-02T14:04:17.720Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "7",
+        "object_repr": "Freshly Ground Black Pepper",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2023-05-02T14:04:35.212Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "7",
+        "object_repr": "Pound",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2023-05-02T14:05:01.819Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "fooditem"
+        ],
+        "object_id": "8",
+        "object_repr": "Linguine",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2023-05-02T14:05:03.482Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "8",
+        "object_repr": "Linguine",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2023-05-02T14:05:36.415Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "1",
+        "object_repr": "Tomato",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2023-05-02T14:06:06.305Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "fooditem"
+        ],
+        "object_id": "2",
+        "object_repr": "Brie",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Note\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2023-05-02T14:06:09.301Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "2",
+        "object_repr": "Brie",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2023-05-02T14:25:31.316Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "8",
+        "object_repr": "Gram",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2023-05-02T14:25:39.181Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "5",
+        "object_repr": "Ounce",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2023-05-02T14:25:47.189Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "4",
+        "object_repr": "Stick",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2023-05-02T14:25:55.252Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "measure"
+        ],
+        "object_id": "1",
+        "object_repr": "Cup",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2023-05-02T15:02:32.145Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "5",
+        "object_repr": "Olive Oils",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2023-05-02T15:02:39.205Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "8",
+        "object_repr": "Linguines",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2023-05-02T15:45:15.714Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "6",
+        "object_repr": "Salt",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2023-05-02T15:45:22.899Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "2",
+        "object_repr": "Brie",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2023-05-02T15:45:27.591Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "3",
+        "object_repr": "Fresh Basil",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2023-05-02T15:45:36.802Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "8",
+        "object_repr": "Linguine",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2023-05-02T15:46:22.474Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "fooditem"
+        ],
+        "object_id": "4",
+        "object_repr": "Garlic",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2023-05-02T15:46:23.951Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "4",
+        "object_repr": "Garlic",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2023-05-02T16:04:24.975Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "1",
+        "object_repr": "Tomatoes",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2023-05-02T16:04:32.597Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "2",
+        "object_repr": "Brie",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2023-05-02T16:04:44.826Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "3",
+        "object_repr": "Fresh Basil",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2023-05-02T16:04:57.385Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "5",
+        "object_repr": "Olive Oil",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2023-05-02T16:05:04.884Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "6",
+        "object_repr": "Salt",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2023-05-02T16:05:16.872Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "7",
+        "object_repr": "Freshly Ground Black Pepper",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2023-05-02T16:05:22.757Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "8",
+        "object_repr": "Linguine",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2023-05-02T16:05:56.525Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "1",
+        "object_repr": "Tomatoes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+        "action_time": "2023-05-02T16:06:17.337Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "1",
+        "object_repr": "Tomatoes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+        "action_time": "2023-05-02T16:06:40.747Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "fooditem"
+        ],
+        "object_id": "1",
+        "object_repr": "Tomato",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Note\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+        "action_time": "2023-05-02T17:01:14.400Z",
+        "user": [
+            "lewey"
+        ],
+        "content_type": [
+            "recipes",
+            "ingredient"
+        ],
+        "object_id": "1",
+        "object_repr": "Tomatoes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+}
+]
