@@ -1,7 +1,7 @@
 # Farm Fresh Recipes
 
 ## Description:
-This is a Website built for anyone between the casual home cook or professional chef to create and store recipes with the world! There are many features including the ability to store and create recipes, add images, create and delete helpful tags, delete recipes,
+This is a Website built for anyone between the casual home cook or professional chef to create and store recipes with the world! There are many features including the ability to store and create recipes, add images, create and delete helpful tags, and also delete recipes.
 
 https://user-images.githubusercontent.com/102191748/236646256-0ca5f331-b5c4-4f5c-9350-44cb881d8ee4.mp4
 
