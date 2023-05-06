@@ -44,11 +44,9 @@
       <ol>
         {% for step in recipe.steps.all %}<li>{{ step.directions }}</li>{% endfor %}
       </ol>
-      {% if recipe.ratings %}
         <div>
           <p>{{ recipe.rating_average }}</p>
         </div>
-      {% endif %}
       <div>
         <form id="rating"
               method="post"

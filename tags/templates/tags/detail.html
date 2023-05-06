@@ -16,12 +16,14 @@
                     <div class="recipe-grid">
                         <div id="card" class="card border-dark" style="width: 18rem;">
                             {% if recipe.image %}
+                            <a href="{% url 'recipe_detail' recipe.pk %}">
                                 <img class="card-img-top recipe-card-image"
                                     src="{{ recipe.image }}"
                                     height="auto"
                                     width="auto"
                                     alt="food pic"
                                 />
+                            </a>
                             {% endif %}
                             <div class="card-body bg-dark bg-opacity-75">
                                 <center class="card-title m-2">
