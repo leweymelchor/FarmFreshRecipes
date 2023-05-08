@@ -36,6 +36,10 @@ Build a functional website for users to create, edit, delete, and view their rec
 
 ### Future Updates:
 - Add ability to add Ingriedients lists and steps lists to a recipe directly from the site
+- Add custom 404 page
+- Add  create user form
+- Add user login and log out function
+- Add favorite Recipes page only visible to specific user
 
 ## Created By:
 

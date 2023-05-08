@@ -7,7 +7,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from recipes.forms import RatingForm
 from recipes.models import Recipe
 # from recipes.forms import RecipeForm
-# from recipes.models import Step
+from recipes.models import Step
 
 
 # CLASS BASED VIEWS
