@@ -5,14 +5,10 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from recipes.forms import RatingForm
+from recipes.models import Recipe
+# from recipes.forms import RecipeForm
+# from recipes.models import Step
 
-try:
-    from recipes.forms import RecipeForm
-    from recipes.models import Recipe
-    from recipes.models import Step
-except Exception:
-    RecipeForm = None
-    Recipe = None
 
 
 # CLASS BASED VIEWS
