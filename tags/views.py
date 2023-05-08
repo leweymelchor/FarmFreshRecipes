@@ -1,21 +1,13 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
-try:
-    from tags.models import Tag
-except Exception:
-    Tag = None
+
+from tags.models import Tag
 
 
-# Create your views here.
-# def show_tags(request):
-#     context = {
-#         "tags": Tag.objects.all() if Tag else None,
-#     }
-#     return render(request, "tags/list.html", context)
 class PageTitleViewMixin:
     title = ""
 
