@@ -80,6 +80,25 @@
                       <p class="text-secondary">Create a tag</p>
                     </a>
                   </li>
+                  {% if not user.is_authenticated %}
+                  <li>
+                    <a class="text-body dropdown-item"
+                    style="text-decoration: none"
+                    href="{% url 'login' %}">
+                      <p class="text-secondary">Login</p>
+                    </a>
+                  </li>
+                  {% endif %}
+                  {% if user.is_authenticated %}
+                  <li>
+                    <a class="text-body dropdown-item"
+                    style="text-decoration: none"
+                    href="{% url 'logout' %}">
+                      <p class="text-secondary">Logout</p>
+                    </a>
+                  </li>
+                  {% endif %}
+                  {% if user.is_staff %}
                   <li>
                     <a class="text-body dropdown-item"
                        style="text-decoration: none"
@@ -87,6 +106,7 @@
                       <p class="text-secondary">Admin</p>
                     </a>
                   </li>
+                  {% endif %}
                 </ul>
               </div>
             </nav>

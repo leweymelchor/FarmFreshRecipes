@@ -9,6 +9,8 @@ from recipes.models import Recipe
 # from recipes.forms import RecipeForm
 from recipes.models import Step
 
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 # CLASS BASED VIEWS
 class PageTitleViewMixin:
@@ -21,24 +23,6 @@ class PageTitleViewMixin:
         context = super().get_context_data(**kwargs)
         context["title"] = self.get_title()
         return context
-
-
-class RecipeCreateView(PageTitleViewMixin, CreateView):
-    model = Recipe
-    template_name = "recipes/new.html"
-    fields = ["name", "author", "description", "image"]
-    success_url = reverse_lazy("recipes_list")
-    title = "FFR - New Recipe"
-
-
-class RecipeUpdateView(PageTitleViewMixin, UpdateView):
-    model = Recipe
-    template_name = "recipes/edit.html"
-    fields = ["name", "author", "description", "image"]
-    success_url = reverse_lazy("recipes_list")
-
-    def get_title(self):
-        return "FFR - " + self.object.name
 
 
 class RecipeListView(PageTitleViewMixin, ListView):
@@ -61,7 +45,25 @@ class RecipeDetailView(PageTitleViewMixin, DetailView):
         return "FFR - " + self.object.name
 
 
-class RecipeDeleteView(PageTitleViewMixin, DeleteView):
+class RecipeCreateView(LoginRequiredMixin, PageTitleViewMixin, CreateView):
+    model = Recipe
+    template_name = "recipes/new.html"
+    fields = ["name", "author", "description", "image"]
+    success_url = reverse_lazy("recipes_list")
+    title = "FFR - New Recipe"
+
+
+class RecipeUpdateView(LoginRequiredMixin, PageTitleViewMixin, UpdateView):
+    model = Recipe
+    template_name = "recipes/edit.html"
+    fields = ["name", "author", "description", "image"]
+    success_url = reverse_lazy("recipes_list")
+
+    def get_title(self):
+        return "FFR - " + self.object.name
+
+
+class RecipeDeleteView(LoginRequiredMixin, PageTitleViewMixin, DeleteView):
     model = Recipe
     template_name = "recipes/delete.html"
     success_url = reverse_lazy("recipes_list")

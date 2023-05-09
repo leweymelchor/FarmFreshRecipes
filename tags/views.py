@@ -4,8 +4,9 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
-
 from tags.models import Tag
+
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class PageTitleViewMixin:
@@ -36,7 +37,7 @@ class TagDetailView(PageTitleViewMixin, DetailView):
         return "FFR - " + self.object.name
 
 
-class TagCreateView(PageTitleViewMixin, CreateView):
+class TagCreateView(LoginRequiredMixin, PageTitleViewMixin, CreateView):
     model = Tag
     template_name = "tags/create.html"
     fields = ["name", "recipes"]
@@ -44,7 +45,7 @@ class TagCreateView(PageTitleViewMixin, CreateView):
     title = "FFR - New Tag"
 
 
-class TagUpdateView(PageTitleViewMixin, UpdateView):
+class TagUpdateView(LoginRequiredMixin, PageTitleViewMixin, UpdateView):
     model = Tag
     template_name = "tags/edit.html"
     fields = ["name", "recipes"]
@@ -54,7 +55,7 @@ class TagUpdateView(PageTitleViewMixin, UpdateView):
         return "FFR - " + self.object.name
 
 
-class TagDeleteView(PageTitleViewMixin, DeleteView):
+class TagDeleteView(LoginRequiredMixin, PageTitleViewMixin, DeleteView):
     model = Tag
     template_name = "tags/delete.html"
     success_url = reverse_lazy("tags_list")

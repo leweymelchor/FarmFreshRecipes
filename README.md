@@ -34,6 +34,14 @@ Build a functional website for users to create, edit, delete, and view their rec
 ### Latest Updates:
 - Linked the Related Tag Recipe back to it's corresponding detail page
 
+- Created Login Template
+- Added Login Path to Project URL's
+- Added LoginRequiredMixin to all Create, Update, and Delete Views
+- Added Login/Logout Redirect URL's to Project Settings
+- Added Logout Path To Project URL's
+- Added Login/Logout Links to Base Template Nav
+- Added If Statements to Login/Logout/Admin Nav Links
+
 ### Future Updates:
 - Add ability to add Ingriedients lists and steps lists to a recipe directly from the site
 - Add custom 404 page
