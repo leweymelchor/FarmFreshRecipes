@@ -3,12 +3,13 @@
 {% block content %}
   <body>
     <main class="recipe-form recipe-detail" style="padding-right: 50px; padding-top: 35px; padding-bottom: 25px;">
-        <h2>Log In</h2>
+        <h2>Sign up</h2>
         <form method="post">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit" class="btn btn-warning" style="font-family: 'Pathway Extreme'; margin-left: 400px;">Log In</button>
-          <div class="btn btn-warning" style="margin-left: 75px;"><a class="text-dark"style="text-decoration: none; " href="{% url 'signup' %}">Sign up</a></div>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-warning">Register</button>
+            <br><br>
+            <a href="{% url 'home' %}">Home</a>
         </form>
     </main>
     <footer class="text-center text-body fs-6 fw-lighter">

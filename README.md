@@ -49,12 +49,19 @@ Build a functional website for users to create, edit, delete, and view their rec
 - Added Form Valid Method to Create Recipe
 - Added Author on Recipe Detail Template
 
+- Created sign-up url
+- Created sign-up class create view
+- Created sign-up form
+- Created sign-up template
+
 ### Future Updates:
 - Add ability to add Ingriedients lists and steps lists to a recipe directly from the site
 - Add custom 404 page
 - Add  create user form
-- Add user login and log out function
 - Add favorite Recipes page only visible to specific user
+
+- Create a page that lists the users and their recipes
+- Add an updated_by property to Recipe that is a reference to a user; then, set it every time someone edits the Recipe
 
 ## Created By:
 
