@@ -48,9 +48,13 @@ class RecipeDetailView(PageTitleViewMixin, DetailView):
 class RecipeCreateView(LoginRequiredMixin, PageTitleViewMixin, CreateView):
     model = Recipe
     template_name = "recipes/new.html"
-    fields = ["name", "author", "description", "image"]
+    fields = ["name", "description", "image"]
     success_url = reverse_lazy("recipes_list")
     title = "FFR - New Recipe"
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 class RecipeUpdateView(LoginRequiredMixin, PageTitleViewMixin, UpdateView):

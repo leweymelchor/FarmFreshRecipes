@@ -42,6 +42,13 @@ Build a functional website for users to create, edit, delete, and view their rec
 - Added Login/Logout Links to Base Template Nav
 - Added If Statements to Login/Logout/Admin Nav Links
 
+- Import USER_MODEL to Recipe models
+- Changed Recipe model Author Field, to Foreign key, to USER_MODEL
+- Show Author On Detail Page
+- Remove Author Field From Recipe Create View
+- Added Form Valid Method to Create Recipe
+- Added Author on Recipe Detail Template
+
 ### Future Updates:
 - Add ability to add Ingriedients lists and steps lists to a recipe directly from the site
 - Add custom 404 page
