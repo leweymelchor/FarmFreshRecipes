@@ -54,10 +54,15 @@ Build a functional website for users to create, edit, delete, and view their rec
 - Created sign-up form
 - Created sign-up template
 
+- Created update profile template
+- Created profileview
+- Created update profile form
+- Added update profile template to urls
+- Updated base to add block title for the templates that dont have a corresponding view
+
 ### Future Updates:
 - Add ability to add Ingriedients lists and steps lists to a recipe directly from the site
 - Add custom 404 page
-- Add  create user form
 - Add favorite Recipes page only visible to specific user
 
 - Create a page that lists the users and their recipes
