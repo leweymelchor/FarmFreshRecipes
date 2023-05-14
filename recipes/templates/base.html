@@ -5,7 +5,7 @@
             <meta charset="UTF-8"/>
             <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <title>{{ title }}</title>
+            <title>{% block title %} {{ title }} {% endblock title %}</title>
             {% comment %} CSS {% endcomment %}
             <link rel="stylesheet" href="{% static 'css/app.css' %}"/>
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -90,6 +90,13 @@
                   </li>
                   {% endif %}
                   {% if user.is_authenticated %}
+                  <li>
+                    <a class="text-body dropdown-item"
+                    style="text-decoration: none"
+                    href="{% url 'profile' user.id %}">
+                      <p class="text-secondary">Profile</p>
+                    </a>
+                  </li>
                   <li>
                     <a class="text-body dropdown-item"
                     style="text-decoration: none"

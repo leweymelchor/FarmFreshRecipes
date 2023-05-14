@@ -23,6 +23,18 @@ class SignUpForm(UserCreationForm):
             ]
 
 
+class ProfileForm(forms.ModelForm):
+
+    class Meta:
+        model = User
+        fields = [
+            'username',
+            'first_name',
+            'last_name',
+            'email',
+            ]
+
+
 try:
     from recipes.models import Recipe
     from recipes.models import Step

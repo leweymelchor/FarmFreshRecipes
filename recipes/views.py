@@ -3,7 +3,8 @@ from django.urls import reverse_lazy
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from recipes.forms import SignUpForm
+from recipes.forms import SignUpForm, ProfileForm
+from django.contrib.auth.models import User
 
 from recipes.forms import RatingForm
 from recipes.models import Recipe
@@ -77,10 +78,22 @@ class RecipeDeleteView(LoginRequiredMixin, PageTitleViewMixin, DeleteView):
         return "FFR - " + self.object.name
 
 
-class SignUpView(CreateView):
+class SignUpView(PageTitleViewMixin, CreateView):
     form_class = SignUpForm
     success_url = reverse_lazy('login')
     template_name = 'registration/signup.html'
+    title = "Sign-up"
+
+
+class ProfileView(PageTitleViewMixin, UpdateView):
+    model = User
+    form_class = ProfileForm
+    success_url = reverse_lazy('home')
+    template_name = 'registration/profile.html'
+
+    def get_title(self):
+        return "Update " + self.object.username + "'s Profile"
+
 
 # NEW Step View
 # class StepCreateView(PageTitleViewMixin, CreateView):
