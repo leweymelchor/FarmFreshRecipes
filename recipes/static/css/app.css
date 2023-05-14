@@ -17,7 +17,7 @@ h1, h2 {
   font-family: 'Roboto', sans-serif;
 }
 
-p, th, td, ol, a{
+p, th, td, ol, a {
   font-family: 'Pathway Extreme', sans-serif;
 }
 
@@ -33,6 +33,10 @@ a,
 a:visited, a:hover {
   text-decoration: none;
   color: rgb(256, 195, 68);
+}
+
+.black {
+  color: #000000;
 }
 
 button.button {

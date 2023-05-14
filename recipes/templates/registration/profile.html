@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <body>
+    <main class="recipe-form recipe-detail" style="padding-right: 50px; padding-top: 35px; padding-bottom: 25px;">
+        <h2>Profile Page</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-warning">Update</button>
+            <br><br>
+            <a href="{% url 'home' %}">Home</a>
+        </form>
+    </main>
+    <footer class="text-center text-body fs-6 fw-lighter">
+      <div class="col">Copyright 2022 by David "Lewey" Melchor</div>
+      <div class="col">The Finest Recipes Money Can Buy</div>
+    </footer>
+  </body>
+{% endblock content %}

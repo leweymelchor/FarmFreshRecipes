@@ -34,12 +34,39 @@ Build a functional website for users to create, edit, delete, and view their rec
 ### Latest Updates:
 - Linked the Related Tag Recipe back to it's corresponding detail page
 
+- Created Login Template
+- Added Login Path to Project URL's
+- Added LoginRequiredMixin to all Create, Update, and Delete Views
+- Added Login/Logout Redirect URL's to Project Settings
+- Added Logout Path To Project URL's
+- Added Login/Logout Links to Base Template Nav
+- Added If Statements to Login/Logout/Admin Nav Links
+
+- Import USER_MODEL to Recipe models
+- Changed Recipe model Author Field, to Foreign key, to USER_MODEL
+- Show Author On Detail Page
+- Remove Author Field From Recipe Create View
+- Added Form Valid Method to Create Recipe
+- Added Author on Recipe Detail Template
+
+- Created sign-up url
+- Created sign-up class create view
+- Created sign-up form
+- Created sign-up template
+
+- Created update profile template
+- Created profileview
+- Created update profile form
+- Added update profile template to urls
+- Updated base to add block title for the templates that dont have a corresponding view
+
 ### Future Updates:
 - Add ability to add Ingriedients lists and steps lists to a recipe directly from the site
 - Add custom 404 page
-- Add  create user form
-- Add user login and log out function
 - Add favorite Recipes page only visible to specific user
+
+- Create a page that lists the users and their recipes
+- Add an updated_by property to Recipe that is a reference to a user; then, set it every time someone edits the Recipe
 
 ## Created By:
 

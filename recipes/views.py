@@ -1,13 +1,17 @@
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from recipes.forms import SignUpForm, ProfileForm
+from django.contrib.auth.models import User
 
 from recipes.forms import RatingForm
 from recipes.models import Recipe
 # from recipes.forms import RecipeForm
 from recipes.models import Step
+
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # CLASS BASED VIEWS
@@ -21,24 +25,6 @@ class PageTitleViewMixin:
         context = super().get_context_data(**kwargs)
         context["title"] = self.get_title()
         return context
-
-
-class RecipeCreateView(PageTitleViewMixin, CreateView):
-    model = Recipe
-    template_name = "recipes/new.html"
-    fields = ["name", "author", "description", "image"]
-    success_url = reverse_lazy("recipes_list")
-    title = "FFR - New Recipe"
-
-
-class RecipeUpdateView(PageTitleViewMixin, UpdateView):
-    model = Recipe
-    template_name = "recipes/edit.html"
-    fields = ["name", "author", "description", "image"]
-    success_url = reverse_lazy("recipes_list")
-
-    def get_title(self):
-        return "FFR - " + self.object.name
 
 
 class RecipeListView(PageTitleViewMixin, ListView):
@@ -61,13 +47,52 @@ class RecipeDetailView(PageTitleViewMixin, DetailView):
         return "FFR - " + self.object.name
 
 
-class RecipeDeleteView(PageTitleViewMixin, DeleteView):
+class RecipeCreateView(LoginRequiredMixin, PageTitleViewMixin, CreateView):
+    model = Recipe
+    template_name = "recipes/new.html"
+    fields = ["name", "description", "image"]
+    success_url = reverse_lazy("recipes_list")
+    title = "FFR - New Recipe"
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+
+class RecipeUpdateView(LoginRequiredMixin, PageTitleViewMixin, UpdateView):
+    model = Recipe
+    template_name = "recipes/edit.html"
+    fields = ["name", "author", "description", "image"]
+    success_url = reverse_lazy("recipes_list")
+
+    def get_title(self):
+        return "FFR - " + self.object.name
+
+
+class RecipeDeleteView(LoginRequiredMixin, PageTitleViewMixin, DeleteView):
     model = Recipe
     template_name = "recipes/delete.html"
     success_url = reverse_lazy("recipes_list")
 
     def get_title(self):
         return "FFR - " + self.object.name
+
+
+class SignUpView(PageTitleViewMixin, CreateView):
+    form_class = SignUpForm
+    success_url = reverse_lazy('login')
+    template_name = 'registration/signup.html'
+    title = "Sign-up"
+
+
+class ProfileView(PageTitleViewMixin, UpdateView):
+    model = User
+    form_class = ProfileForm
+    success_url = reverse_lazy('home')
+    template_name = 'registration/profile.html'
+
+    def get_title(self):
+        return "Update " + self.object.username + "'s Profile"
 
 
 # NEW Step View
